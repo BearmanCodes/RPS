@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script defer src="client.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="express.js"></script>
+</head>
+<body>
+    <!--<div id="scores">
+        <h1 class="oppScore">0</h1>
+        <h1 class="playerScore">0</h1>
+    </div> -->
+    <div id="ts">
+        <h1 class="title" style="-webkit-text-stroke-width: 2.5px;
+        -webkit-text-stroke-color: black;">Rock Paper Scissors!</h1>
+        <div class="center">
+            
+            <div id="buttonLayouts">
+                <button class="start" onclick="scrollUp()">Start!</button>
+                <button class="start" onclick="hostUp()">Host!</button>
+                <button class="start" onclick="joinUp()">Join!</button>
+            </div>
+
+            <div id="hostLayout">
+                <input id="username" type="text" class="inputs" maxlength="16" placeholder="Username">
+                <button class="button" style="margin-top: 1%;" onclick="roomCreate()">Play!</button>
+            </div>
+
+            <div id="joinLayout">
+                <input id="userPrompt" type="text" class="inputs" maxlength="16" placeholder="Username">
+                <br>
+                <input id="roomPrompt" type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==5) return false;" class="inputs" maxlength="5" placeholder="Room ID">
+                <button class="button" style="margin-top: 1%;" onclick="roomJoin()">Join!</button>
+            </div>
+            
+            <div id="userLayout">
+                <h1 class="title" style="font-size: 275%; left: 0%;
+                transform: translateX(0%); display: block;">You are now hosting!</h1>
+                <h2 class="title" style="font-size: 150%; left: 0%;
+                transform: translateX(0%); display: block; color: lightgray" id="roomID">Room ID: </h2>
+                <div id="playerList">
+                    <h2 class="title" style="font-size: 150%; left: 0%;
+                    transform: translateX(0%); display: block; color: lightgray;" id="p1">Player 1: </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 id="resultScreen" class="results"></h1>
+    <div id="oppSelect" class="center">
+        <img id="playerChoosing" src="./Img/Hands/playerSelec.gif" alt="Player Selection">
+        <img id="oppChoosing" src="./Img/Hands/oppSelec.gif" alt="Opponent Selection">
+    </div>
+    <div id="playerSelect" class="center">
+        <button class="button" onclick="rockChoice()">Rock!</button>
+        <button class="button" onclick="paperChoice()">Paper!</button>
+        <button class="button" onclick="scissorsChoice()">Scissors!</button>
+    </div>
+    <div id="refresh" class="center" style="display: none;">
+        <button class="refButton" onclick="replay()"><img src="./Img/refresh.png" width="50" height="50" style="text-align: center;"></button>
+    </div>
+</body>
+</html>

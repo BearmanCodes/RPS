@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+}
+
+#hostLayout {
+    display: none;
+}
+
+#userLayout {
+    display: none;
+}
+
+#joinLayout {
+    display: none;
+}
+
+body {
+    background-color: rgb(55, 55, 55);
+}
+
+.title {
+    font-family: 'Roboto';
+    display: inline-block;
+    color: white;
+    position: relative;
+    text-align: center;
+    font-size: 350%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.room {
+    font-family: 'Roboto';
+    display: inline-block;
+    color: white;
+    position: relative;
+    text-align: center;
+    font-size: 300%;
+}
+
+.inputs {
+    width:30%;
+    border:4px solid #86A7A6;
+    font-size: 50px;
+    text-align: center;
+    border-radius:12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    outline:none;
+    padding:20px;
+    box-sizing:border-box;
+    transition:.3s;
+} 
+
+.inputs:focus{
+    border-color:#A1C6B9;
+    box-shadow:0 0 8px 0 #A1C6B9;
+}
+
+.oppScore{
+    font-family: 'Roboto';
+    display: inline;
+    color: white;
+    position: relative;
+    font-size: 225%;
+    top: 50%;
+}
+.playerScore{
+    font-family: 'Roboto';
+    display: inline;
+    color: white;
+    position: relative;
+    font-size: 225%;
+}
+
+.results {
+    font-family: 'Roboto';
+    color: gold;
+    position: relative;
+    text-align: center;
+    font-size: 350%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center{
+    text-align: center;
+}
+
+#oppChoosing{
+    display: none;
+}
+
+#playerChoosing{
+    display: none;
+}
+
+#playerSelect{
+    display: none;
+}
+
+.start{
+    margin: 8px;
+    background-color: #86A7A6;
+    color: white;
+    font-family: 'Roboto';
+    text-align: center;
+    display: inline-block;
+    border: 3px solid #A1C6B9;
+    font-size: 32px;
+    padding: 24px 64px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition-duration: 0.35s;
+}
+
+.start:hover{
+    opacity: 75%;
+}
+
+.refButton{
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transition-duration: 0.25s;
+}
+
+.refButton:hover{
+    opacity: 55%;
+}
+
+.button{
+    background-color: #518AA9;
+    color: white;
+    font-family: 'Roboto';
+    text-align: center;
+    display: inline-block;
+    border: 3px solid #88BFE0;
+    font-size: 32px;
+    padding: 12px 32px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition-duration: 0.35s;
+}
+
+.button:hover{
+    opacity: 75%;
+}
